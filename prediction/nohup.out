@@ -1,0 +1,240 @@
+[05/May/2016:15:30:15] ENGINE Listening for SIGHUP.
+[05/May/2016:15:30:15] ENGINE Listening for SIGTERM.
+[05/May/2016:15:30:15] ENGINE Listening for SIGUSR1.
+[05/May/2016:15:30:15] ENGINE Bus STARTING
+[05/May/2016:15:30:15] ENGINE Forking once.
+[05/May/2016:15:30:15] ENGINE Forking twice.
+[05/May/2016:15:31:44] ENGINE Listening for SIGHUP.
+[05/May/2016:15:31:44] ENGINE Listening for SIGTERM.
+[05/May/2016:15:31:44] ENGINE Listening for SIGUSR1.
+[05/May/2016:15:31:44] ENGINE Bus STARTING
+[05/May/2016:15:31:44] ENGINE Forking once.
+[05/May/2016:15:31:44] ENGINE Forking twice.
+[05/May/2016:15:32:42] ENGINE Listening for SIGHUP.
+[05/May/2016:15:32:42] ENGINE Listening for SIGTERM.
+[05/May/2016:15:32:42] ENGINE Listening for SIGUSR1.
+[05/May/2016:15:32:42] ENGINE Bus STARTING
+[05/May/2016:15:32:42] ENGINE Started monitor thread 'Autoreloader'.
+[05/May/2016:15:32:42] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/May/2016:15:32:42] ENGINE Serving on http://0.0.0.0:8080
+[05/May/2016:15:32:42] ENGINE Bus STARTED
+<type 'str'>
+104.219.207.83 - - [05/May/2016:15:33:02] "GET /getData?date=2016-05-27&hour=00&loc_id=0.68821&ne_id=1.94879 HTTP/1.1" 200 587 "http://142.150.208.214:8080/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+[05/May/2016:15:33:05] HTTP 
+Request Headers:
+  REFERER: http://142.150.208.214:8080/
+  HOST: 142.150.208.214:8080
+  CONNECTION: keep-alive
+  Remote-Addr: 104.219.207.83
+  ACCEPT: */*
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+  X-REQUESTED-WITH: XMLHttpRequest
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  ACCEPT-ENCODING: gzip, deflate, sdch
+[05/May/2016:15:33:05] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/jsontools.py", line 63, in json_handler
+    value = cherrypy.serving.request._json_inner_handler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "app.py", line 93, in getData
+    speed_six = es_search.movavg(weekday+hour_six,loc_id, "-")
+  File "/home/ubuntu/data/es_search.py", line 65, in movavg
+    return "{0:.2f}".format(ma_value)
+UnboundLocalError: local variable 'ma_value' referenced before assignment
+104.219.207.83 - - [05/May/2016:15:33:05] "GET /getData?date=2016-05-27&hour=18&loc_id=0.68821&ne_id=1.94879 HTTP/1.1" 500 1723 "http://142.150.208.214:8080/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+[05/May/2016:15:33:57] HTTP 
+Request Headers:
+  REFERER: http://142.150.208.214:8080/
+  HOST: 142.150.208.214:8080
+  CONNECTION: keep-alive
+  Remote-Addr: 104.219.207.83
+  ACCEPT: */*
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+  X-REQUESTED-WITH: XMLHttpRequest
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  ACCEPT-ENCODING: gzip, deflate, sdch
+[05/May/2016:15:33:57] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/lib/jsontools.py", line 63, in json_handler
+    value = cherrypy.serving.request._json_inner_handler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "app.py", line 93, in getData
+    speed_six = es_search.movavg(weekday+hour_six,loc_id, "-")
+  File "/home/ubuntu/data/es_search.py", line 65, in movavg
+    return "{0:.2f}".format(ma_value)
+UnboundLocalError: local variable 'ma_value' referenced before assignment
+104.219.207.83 - - [05/May/2016:15:33:57] "GET /getData?date=2016-05-27&hour=18&loc_id=0.68888&ne_id=1.40298 HTTP/1.1" 500 1723 "http://142.150.208.214:8080/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+[05/May/2016:15:45:13] ENGINE Restarting because /home/ubuntu/prediction/app.py changed.
+[05/May/2016:15:45:13] ENGINE Stopped thread 'Autoreloader'.
+[05/May/2016:15:45:13] ENGINE Bus STOPPING
+[05/May/2016:15:45:13] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8080)) shut down
+[05/May/2016:15:45:13] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/May/2016:15:45:13] ENGINE Bus STOPPED
+[05/May/2016:15:45:13] ENGINE Bus EXITING
+[05/May/2016:15:45:13] ENGINE Bus EXITED
+[05/May/2016:15:45:13] ENGINE Waiting for child threads to terminate...
+[05/May/2016:15:45:13] ENGINE Re-spawning app.py
+[05/May/2016:15:45:13] ENGINE Listening for SIGHUP.
+[05/May/2016:15:45:13] ENGINE Listening for SIGTERM.
+[05/May/2016:15:45:13] ENGINE Listening for SIGUSR1.
+[05/May/2016:15:45:13] ENGINE Bus STARTING
+[05/May/2016:15:45:13] ENGINE Started monitor thread 'Autoreloader'.
+[05/May/2016:15:45:13] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/May/2016:15:45:14] ENGINE Serving on http://0.0.0.0:8080
+[05/May/2016:15:45:14] ENGINE Bus STARTED
+[05/May/2016:15:45:51] ENGINE Restarting because /home/ubuntu/prediction/app.py changed.
+[05/May/2016:15:45:51] ENGINE Stopped thread 'Autoreloader'.
+[05/May/2016:15:45:51] ENGINE Bus STOPPING
+[05/May/2016:15:45:51] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8080)) shut down
+[05/May/2016:15:45:51] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/May/2016:15:45:51] ENGINE Bus STOPPED
+[05/May/2016:15:45:51] ENGINE Bus EXITING
+[05/May/2016:15:45:51] ENGINE Bus EXITED
+[05/May/2016:15:45:51] ENGINE Waiting for child threads to terminate...
+[05/May/2016:15:45:51] ENGINE Re-spawning app.py
+[05/May/2016:15:45:51] ENGINE Listening for SIGHUP.
+[05/May/2016:15:45:51] ENGINE Listening for SIGTERM.
+[05/May/2016:15:45:51] ENGINE Listening for SIGUSR1.
+[05/May/2016:15:45:51] ENGINE Bus STARTING
+[05/May/2016:15:45:51] ENGINE Started monitor thread 'Autoreloader'.
+[05/May/2016:15:45:51] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/May/2016:15:45:51] ENGINE Serving on http://0.0.0.0:8080
+[05/May/2016:15:45:51] ENGINE Bus STARTED
+[05/May/2016:15:46:21] ENGINE Restarting because /home/ubuntu/prediction/app.py changed.
+[05/May/2016:15:46:21] ENGINE Stopped thread 'Autoreloader'.
+[05/May/2016:15:46:21] ENGINE Bus STOPPING
+[05/May/2016:15:46:21] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8080)) shut down
+[05/May/2016:15:46:21] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/May/2016:15:46:21] ENGINE Bus STOPPED
+[05/May/2016:15:46:21] ENGINE Bus EXITING
+[05/May/2016:15:46:21] ENGINE Bus EXITED
+[05/May/2016:15:46:21] ENGINE Waiting for child threads to terminate...
+[05/May/2016:15:46:21] ENGINE Re-spawning app.py
+[05/May/2016:15:46:22] ENGINE Listening for SIGHUP.
+[05/May/2016:15:46:22] ENGINE Listening for SIGTERM.
+[05/May/2016:15:46:22] ENGINE Listening for SIGUSR1.
+[05/May/2016:15:46:22] ENGINE Bus STARTING
+[05/May/2016:15:46:22] ENGINE Started monitor thread 'Autoreloader'.
+[05/May/2016:15:46:22] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/May/2016:15:46:22] ENGINE Serving on http://0.0.0.0:8080
+[05/May/2016:15:46:22] ENGINE Bus STARTED
+[05/May/2016:15:46:48] ENGINE Restarting because /home/ubuntu/prediction/app.py changed.
+[05/May/2016:15:46:48] ENGINE Stopped thread 'Autoreloader'.
+[05/May/2016:15:46:48] ENGINE Bus STOPPING
+[05/May/2016:15:46:48] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8080)) shut down
+[05/May/2016:15:46:48] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/May/2016:15:46:48] ENGINE Bus STOPPED
+[05/May/2016:15:46:48] ENGINE Bus EXITING
+[05/May/2016:15:46:48] ENGINE Bus EXITED
+[05/May/2016:15:46:48] ENGINE Waiting for child threads to terminate...
+[05/May/2016:15:46:48] ENGINE Re-spawning app.py
+[05/May/2016:15:46:48] ENGINE Listening for SIGHUP.
+[05/May/2016:15:46:48] ENGINE Listening for SIGTERM.
+[05/May/2016:15:46:48] ENGINE Listening for SIGUSR1.
+[05/May/2016:15:46:48] ENGINE Bus STARTING
+[05/May/2016:15:46:48] ENGINE Started monitor thread 'Autoreloader'.
+[05/May/2016:15:46:48] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/May/2016:15:46:48] ENGINE Serving on http://0.0.0.0:8080
+[05/May/2016:15:46:48] ENGINE Bus STARTED
+[05/May/2016:15:47:05] ENGINE Restarting because /home/ubuntu/prediction/app.py changed.
+[05/May/2016:15:47:05] ENGINE Stopped thread 'Autoreloader'.
+[05/May/2016:15:47:05] ENGINE Bus STOPPING
+[05/May/2016:15:47:05] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8080)) shut down
+[05/May/2016:15:47:05] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/May/2016:15:47:05] ENGINE Bus STOPPED
+[05/May/2016:15:47:05] ENGINE Bus EXITING
+[05/May/2016:15:47:05] ENGINE Bus EXITED
+[05/May/2016:15:47:05] ENGINE Waiting for child threads to terminate...
+[05/May/2016:15:47:05] ENGINE Re-spawning app.py
+[05/May/2016:15:47:06] ENGINE Listening for SIGHUP.
+[05/May/2016:15:47:06] ENGINE Listening for SIGTERM.
+[05/May/2016:15:47:06] ENGINE Listening for SIGUSR1.
+[05/May/2016:15:47:06] ENGINE Bus STARTING
+[05/May/2016:15:47:06] ENGINE Started monitor thread 'Autoreloader'.
+[05/May/2016:15:47:06] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/May/2016:15:47:06] ENGINE Serving on http://0.0.0.0:8080
+[05/May/2016:15:47:06] ENGINE Bus STARTED
+[05/May/2016:15:47:15] ENGINE Restarting because /home/ubuntu/prediction/app.py changed.
+[05/May/2016:15:47:15] ENGINE Stopped thread 'Autoreloader'.
+[05/May/2016:15:47:15] ENGINE Bus STOPPING
+[05/May/2016:15:47:15] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8080)) shut down
+[05/May/2016:15:47:15] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/May/2016:15:47:15] ENGINE Bus STOPPED
+[05/May/2016:15:47:15] ENGINE Bus EXITING
+[05/May/2016:15:47:15] ENGINE Bus EXITED
+[05/May/2016:15:47:15] ENGINE Waiting for child threads to terminate...
+[05/May/2016:15:47:15] ENGINE Re-spawning app.py
+[05/May/2016:15:47:15] ENGINE Listening for SIGHUP.
+[05/May/2016:15:47:15] ENGINE Listening for SIGTERM.
+[05/May/2016:15:47:15] ENGINE Listening for SIGUSR1.
+[05/May/2016:15:47:15] ENGINE Bus STARTING
+[05/May/2016:15:47:15] ENGINE Started monitor thread 'Autoreloader'.
+[05/May/2016:15:47:15] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/May/2016:15:47:15] ENGINE Serving on http://0.0.0.0:8080
+[05/May/2016:15:47:15] ENGINE Bus STARTED
+[05/May/2016:16:17:33] ENGINE Restarting because /home/ubuntu/prediction/app.py changed.
+[05/May/2016:16:17:33] ENGINE Stopped thread 'Autoreloader'.
+[05/May/2016:16:17:33] ENGINE Bus STOPPING
+[05/May/2016:16:17:33] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8080)) shut down
+[05/May/2016:16:17:33] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/May/2016:16:17:33] ENGINE Bus STOPPED
+[05/May/2016:16:17:33] ENGINE Bus EXITING
+[05/May/2016:16:17:33] ENGINE Bus EXITED
+[05/May/2016:16:17:33] ENGINE Waiting for child threads to terminate...
+[05/May/2016:16:17:33] ENGINE Re-spawning app.py
+[05/May/2016:16:17:34] ENGINE Listening for SIGHUP.
+[05/May/2016:16:17:34] ENGINE Listening for SIGTERM.
+[05/May/2016:16:17:34] ENGINE Listening for SIGUSR1.
+[05/May/2016:16:17:34] ENGINE Bus STARTING
+[05/May/2016:16:17:34] ENGINE Started monitor thread 'Autoreloader'.
+[05/May/2016:16:17:34] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/May/2016:16:17:34] ENGINE Serving on http://0.0.0.0:8080
+[05/May/2016:16:17:34] ENGINE Bus STARTED
+[05/May/2016:16:22:43] ENGINE Restarting because /home/ubuntu/prediction/app.py changed.
+[05/May/2016:16:22:43] ENGINE Stopped thread 'Autoreloader'.
+[05/May/2016:16:22:43] ENGINE Bus STOPPING
+[05/May/2016:16:22:43] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8080)) shut down
+[05/May/2016:16:22:43] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/May/2016:16:22:43] ENGINE Bus STOPPED
+[05/May/2016:16:22:43] ENGINE Bus EXITING
+[05/May/2016:16:22:43] ENGINE Bus EXITED
+[05/May/2016:16:22:43] ENGINE Waiting for child threads to terminate...
+[05/May/2016:16:22:43] ENGINE Re-spawning app.py
+[05/May/2016:16:22:43] ENGINE Listening for SIGHUP.
+[05/May/2016:16:22:43] ENGINE Listening for SIGTERM.
+[05/May/2016:16:22:43] ENGINE Listening for SIGUSR1.
+[05/May/2016:16:22:43] ENGINE Bus STARTING
+[05/May/2016:16:22:43] ENGINE Started monitor thread 'Autoreloader'.
+[05/May/2016:16:22:43] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/May/2016:16:22:44] ENGINE Serving on http://0.0.0.0:8080
+[05/May/2016:16:22:44] ENGINE Bus STARTED
+[05/May/2016:16:22:55] ENGINE Restarting because /home/ubuntu/prediction/app.py changed.
+[05/May/2016:16:22:55] ENGINE Stopped thread 'Autoreloader'.
+[05/May/2016:16:22:55] ENGINE Bus STOPPING
+[05/May/2016:16:22:55] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8080)) shut down
+[05/May/2016:16:22:55] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/May/2016:16:22:55] ENGINE Bus STOPPED
+[05/May/2016:16:22:55] ENGINE Bus EXITING
+[05/May/2016:16:22:55] ENGINE Bus EXITED
+[05/May/2016:16:22:55] ENGINE Waiting for child threads to terminate...
+[05/May/2016:16:22:55] ENGINE Re-spawning app.py
+  File "app.py", line 105
+    ca=holidays.Canada()
+    ^
+IndentationError: unexpected indent
+[07/Jun/2016:21:25:40] ENGINE Listening for SIGHUP.
+[07/Jun/2016:21:25:40] ENGINE Listening for SIGTERM.
+[07/Jun/2016:21:25:40] ENGINE Listening for SIGUSR1.
+[07/Jun/2016:21:25:40] ENGINE Bus STARTING
+[07/Jun/2016:21:25:40] ENGINE Forking once.
+[07/Jun/2016:21:25:40] ENGINE Forking twice.
